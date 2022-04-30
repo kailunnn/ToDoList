@@ -19,6 +19,7 @@ const Edit = ({ addData }) => {
                     ...prevData
                 ]
             })
+            setNote("")
         }else{
             return
         }
