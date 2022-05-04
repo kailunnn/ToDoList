@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 } from "uuid";
 
-const Edit = ({ addData }) => {
+const Edit = ({ addData, submittingStatus }) => {
 
     const [note, setNote] = useState("");
     function noteChange(e){
@@ -10,6 +10,7 @@ const Edit = ({ addData }) => {
 
     function addItem(){
         if(note !== ""){
+            submittingStatus.current = true;
             addData(function(prevData){
                 return [
                     {
@@ -22,8 +23,7 @@ const Edit = ({ addData }) => {
             setNote("")
         }else{
             return
-        }
-        
+        }     
     }
 
     return(

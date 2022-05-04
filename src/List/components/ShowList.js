@@ -1,10 +1,11 @@
 import React from "react";
 import Item from "./Item";
 
-const ShowList = ({ listData, deleteData }) => {
+const ShowList = ({ listData, deleteData, submittingStatus }) => {
+
     return(
         <div className="list">
-           {
+           {   
                listData.map(item => {
                    const { note, id } = item
                    return(
